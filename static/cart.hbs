@@ -1,0 +1,23 @@
+<div class="container text-center" style="margin-top: 4rem;">
+  <div class="row my-3">
+      <div class="col-sm-12 col-lg-4 d-flex align-items-stretch justify-content-center mx-auto">
+        <div class="shadow-lg p-5 rounded-3 text-center {{#equals plan.flagship "TRUE"}}border border-danger{{/equals}}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M2 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM0 2a2 2 0 0 1 3.937-.5h8.126A2 2 0 1 1 14.5 3.937v8.126a2 2 0 1 1-2.437 2.437H3.937A2 2 0 1 1 1.5 12.063V3.937A2 2 0 0 1 0 2zm2.5 1.937v8.126c.703.18 1.256.734 1.437 1.437h8.126a2.004 2.004 0 0 1 1.437-1.437V3.937A2.004 2.004 0 0 1 12.063 2.5H3.937A2.004 2.004 0 0 1 2.5 3.937zM14 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM2 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm12 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+              </svg>
+          <h2 class="fw-bold mt-4">{{plan.type}}</h2>
+          <p><span class="display-5">CAD ${{plan.price}}</span>/month</p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{plan.domains}} Domains</li>
+            <li class="list-group-item">{{plan.websites}} Websites</li>
+            <li class="list-group-item">{{plan.storage}} GB Storage</li>
+            <li class="list-group-item">{{plan.cdn}} CDN</li>
+            <li class="list-group-item">{{plan.backup}} Backup</li>
+            <li class="list-group-item">{{plan.ssl}} SSL</li>
+          </ul>
+
+          <a class="btn-dark px-5 px-3 rounded-3" style="margin-top: 2rem; text-decoration: none;" href="/checkout/{{plan.id}}">Proceed to checkout</a>
+        </div>
+      </div>
+  </div>
+</div>

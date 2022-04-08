@@ -1,0 +1,48 @@
+<div class="w-50 mx-auto">
+  <nav class="navbar border-bottom">
+  <div class="container">
+    <div class="navbar-brand d-flex flex-sm-column flex-lg-row">
+      <span class="navbar-caption-wrap"><a class="navbar-caption text-black text-decoration-none" href="/home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          <path d="M8 13A5 5 0 1 1 8 3a5 5 0 0 1 0 10zm0 1A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"/>
+          <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/>
+          <path d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+        </svg>
+        <span class="d-lg-inline d-none">Web Hostings</span>
+      </a></span>
+    </div>
+    <ul class="navbar-nav d-flex flex-row gap-3" data-app-modern-menu="true">
+      <li class="nav-item"><a class="nav-link link mbr-semibold display-7 px-2 py-1 rounded" href="/home">Home</a></li>
+      <li class="nav-item"><a class="nav-link link mbr-semibold display-7 active px-2 py-1 rounded" href="/plans">Plans</a></li>
+      <li class="nav-item"><a class="nav-link link mbr-semibold display-7 px-2 py-1 rounded" href="/login">Login</a></li>
+      <li class="nav-item"><a class="nav-link link mbr-semibold display-7 px-2 py-1 rounded" href="/registration">Register</a></li>
+    </ul>
+  </div>
+</nav>
+
+<h1 class="fw-bold text-center">Update Plan</h1>
+
+<form class="d-flex flex-column gap-3" action="/edit-plan" method="post">
+    <input class="form-control" type="text" name="type" id="type" placeholder="Type" value="{{plan.type}}" required>
+    <input class="form-control" type="number" name="price" id="price" placeholder="Price" value="{{plan.price}}" required>
+    <input class="form-control" type="number" name="domains" id="domains" placeholder="Domains" value="{{plan.domains}}" required>
+    <input class="form-control" type="number" name="websites" id="websites" placeholder="Websites" value="{{plan.websites}}" required>
+    <input class="form-control" type="number" name="storage" id="storage" placeholder="Storage" value="{{plan.storage}}" required>
+    <input class="form-control" type="text" name="cdn" id="cdn" placeholder="CDN" value="{{plan.cdn}}" required>
+    <input class="form-control" type="text" name="backup" id="backup" placeholder="Backup" value="{{plan.backup}}" required>
+    <input class="form-control" type="text" name="ssl" id="ssl" placeholder="SSL" value="{{plan.ssl}}" required>
+    
+    <div>
+      <label for="flagship">Flagship?</label>
+      <select name="flagship" id="flagship">
+        <option value="FALSE">False</option>
+        <option value="TRUE">True</option>
+      </select>
+    </div>
+
+    <input type="hidden" name="id" id="id" value="{{plan.id}}">
+    <br>
+    <input class="btn btn-dark" type="submit" name="submit" id="submit">
+  </form>
+</div>
